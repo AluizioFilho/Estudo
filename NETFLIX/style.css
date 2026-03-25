@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 80px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.profiles {
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.profiles:last-child {
+    margin-right: 0;
+}
+
+.profile {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid transparent;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.profile:hover img {
+    transform: scale(1.05);
+    border-color: #e50914;
+    box-shadow: 0 12px 24px rgba(229, 9, 20, 0.4);
+}
+
+.profile p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.profile:hover p {
+    color: #e50914;
+}
+
+.profile:hover {
+    transform: scale(1.08);
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo para tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 60px;
+    }
+
+    .profiles {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+
+    .profile img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .profile img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile p {
+        font-size: 1rem;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
